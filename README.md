@@ -30,6 +30,6 @@ The advanced build shows the same page with professional tooling, as reading for
 
 ## The brief
 
-The full project brief, the expected results with video tours, and the grading rubric live in the course. The short version: one Artists page presenting all five artists with their songs and durations, a newsletter signup form, shipped through the development branch model, live on your GitHub Pages address.
+You will build one Artists page that presents all five artists with their songs and durations, plus a newsletter signup form, and ship it through the development branch model to your own GitHub Pages address. The full brief, the video tours of the expected results, and the grading rubric are all in the course.
 
 Good luck, and enjoy the roster.
