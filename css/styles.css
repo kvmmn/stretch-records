@@ -12,22 +12,23 @@
 }
 
 :root {
-  --bg-main: #0b0d12;
-  --bg-stripe: #12151e;
-  --bg-card: #181c27;
-  --bg-card-hover: #202534;
-  --border-color: #272d3e;
+  --bg-main: #f0f0f0;
+  --bg-stripe: #e5e5e5;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f9fafb;
+  --border-color: #d1d5db;
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
   
-  --accent-blue: #38bdf8;
-  --accent-purple: #c084fc;
-  --accent-blue-alpha: rgba(56, 189, 248, 0.15);
+  --accent-red: #e63946;
+  --accent-red-hover: #d62828;
+  --accent-blue: #2563eb;
+  --accent-blue-alpha: rgba(37, 99, 235, 0.15);
   
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  --max-width: 96rem; /* 960px */
+  --max-width: 108rem; /* 1080px */
 }
 
 html {
@@ -49,65 +50,120 @@ body {
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 2.4rem;
+  padding-right: 2.4rem;
 }
 
-/* 3. Site Header & Brand Hero */
-.site-header {
-  background: linear-gradient(180deg, #10131b 0%, var(--bg-main) 100%);
-  padding-top: 3.2rem;
-  padding-bottom: 4rem;
+/* 3. Top Brand Bar & Site Header Hero */
+.top-brand-bar {
   border-bottom: 0.1rem solid var(--border-color);
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
+  background-color: var(--bg-main);
 }
 
 .brand {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  font-weight: 800;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
-  color: var(--accent-blue);
-  margin-bottom: 2.4rem;
+  letter-spacing: 0.15rem;
+  color: var(--text-primary);
 }
 
-.hero {
-  max-width: 80rem;
+.site-header {
+  padding-top: 4rem;
+  padding-bottom: 5.6rem;
+  border-bottom: 0.1rem solid var(--border-color);
+  background-color: var(--bg-main);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+  align-items: start;
 }
 
 .kicker {
   font-size: 1.2rem;
   font-weight: 700;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.15rem;
   text-transform: uppercase;
-  color: var(--accent-purple);
-  margin-bottom: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
 }
 
 h1 {
-  font-size: 4rem;
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.05rem;
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.1rem;
   color: var(--text-primary);
-  margin-bottom: 2.4rem;
+  margin-bottom: 1.6rem;
 }
 
-/* 4. Jump Navigation */
-.jump-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 1.6rem;
-}
-
-.jump-nav a {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  font-size: 1.4rem;
-  font-weight: 500;
+.hero-subtitle {
+  font-size: 1.6rem;
   color: var(--text-secondary);
-  background-color: var(--bg-card);
+  line-height: 1.5;
+  max-width: 48rem;
+}
+
+/* 4. Advanced Jump Navigation Box */
+.jump-box {
+  background-color: #e9e9e9;
   border: 0.1rem solid var(--border-color);
+  border-radius: 0.4rem;
+  padding: 2rem 2.4rem;
+}
+
+.jump-kicker {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+.jump-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.jump-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  border-top: 0.1rem solid var(--border-color);
+  text-decoration: none;
+  transition: background-color 0.15s ease, padding-left 0.15s ease;
+}
+
+.jump-item:hover,
+.jump-item:focus-visible {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+  border-radius: 0.4rem;
+}
+
+.jump-name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.jump-genre {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
   border-radius: 9999px;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
