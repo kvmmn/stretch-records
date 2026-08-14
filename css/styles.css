@@ -246,3 +246,181 @@ main > .artist-section:nth-child(even) {
   color: var(--text-muted);
   flex-shrink: 0;
 }
+
+/* 7. Newsletter Section & Form Styling */
+.newsletter-section {
+  padding-top: 5.6rem;
+  padding-bottom: 5.6rem;
+}
+
+.newsletter-card {
+  background-color: var(--bg-card);
+  border: 0.1rem solid var(--border-color);
+  border-radius: 1.2rem;
+  padding: 4rem;
+  box-shadow: 0 0.8rem 2.4rem rgba(0, 0, 0, 0.4);
+}
+
+.newsletter-header {
+  margin-bottom: 3.2rem;
+}
+
+.newsletter-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.newsletter-blurb {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  max-width: 60rem;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 2rem;
+}
+
+.field-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.field-group label {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+
+.field-group input,
+.field-group select {
+  width: 100%;
+  padding: 1.2rem 1.6rem;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  background-color: var(--bg-main);
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.6rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.field-group select option {
+  background-color: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* Accessible & High-Visibility Focus Rings */
+.field-group input:focus,
+.field-group select:focus,
+.btn-submit:focus-visible,
+.back-to-top:focus-visible {
+  outline: 0.2rem solid var(--accent-blue);
+  outline-offset: 0.2rem;
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 0.3rem var(--accent-blue-alpha);
+}
+
+.btn-submit {
+  align-self: flex-start;
+  padding: 1.2rem 2.8rem;
+  font-family: var(--font-family);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0b0d12;
+  background-color: var(--accent-blue);
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-submit:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-0.1rem);
+}
+
+/* 8. Footer & Back to Top */
+.site-footer {
+  border-top: 0.1rem solid var(--border-color);
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+  background-color: var(--bg-main);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  font-size: 1.4rem;
+  color: var(--text-muted);
+}
+
+.back-to-top {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.back-to-top:hover {
+  color: var(--text-primary);
+  text-decoration: underline;
+}
+
+/* 9. Responsive Media Queries (Stretch Goal: < 900px) */
+@media (max-width: 900px) {
+  .song-card-row {
+    flex-wrap: wrap;
+  }
+  
+  .song-card {
+    flex: 1 1 calc(33.333% - 1.6rem);
+    min-width: 14rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .artist-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .song-card {
+    flex: 1 1 calc(50% - 1.6rem);
+  }
+
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  .newsletter-card {
+    padding: 2.4rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.6rem;
+    align-items: flex-start;
+  }
+}
+
