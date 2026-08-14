@@ -180,8 +180,8 @@ h1 {
 
 /* 5. Artist Sections & Striping */
 .artist-section {
-  padding-top: 4.8rem;
-  padding-bottom: 4.8rem;
+  padding-top: 5.6rem;
+  padding-bottom: 5.6rem;
   border-bottom: 0.1rem solid var(--border-color);
 }
 
@@ -190,47 +190,65 @@ main > .artist-section:nth-child(even) {
   background-color: var(--bg-stripe);
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  padding-left: calc(50vw - 50% + 2rem);
-  padding-right: calc(50vw - 50% + 2rem);
+  padding-left: calc(50vw - 50% + 2.4rem);
+  padding-right: calc(50vw - 50% + 2.4rem);
 }
 
 .artist-header {
   display: flex;
   align-items: flex-start;
-  gap: 2.4rem;
+  gap: 3.2rem;
   margin-bottom: 3.2rem;
 }
 
-/* 96px Round Avatar */
-.artist-avatar {
-  width: 9.6rem;
-  height: 9.6rem;
-  border-radius: 50%;
+/* Large Square Artist Photo */
+.artist-photo-square {
+  width: 20rem;
+  height: 20rem;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
-  border: 0.2rem solid var(--border-color);
   flex-shrink: 0;
-  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.4);
+  border: 0.1rem solid var(--border-color);
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.08);
 }
 
-.artist-meta-group h2 {
-  font-size: 2.8rem;
+.artist-meta-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-genre-kicker {
+  font-size: 1.1rem;
   font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1.2;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
   margin-bottom: 0.4rem;
 }
 
-.artist-stats {
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--accent-blue);
+.artist-meta-group h2 {
+  font-size: 3.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.05rem;
   margin-bottom: 0.8rem;
+}
+
+.artist-stats {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
 }
 
 .artist-blurb {
   font-size: 1.5rem;
   color: var(--text-secondary);
-  max-width: 68rem;
+  line-height: 1.5;
+  max-width: 64rem;
 }
 
 /* 6. Ranked Song Cards & Flexbox Row */
